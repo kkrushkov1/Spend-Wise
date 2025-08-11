@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b97652e5c35bee5061a8db0d05013157" label="Budget" max_length="40" name="x_1300913_spndwise_budget" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Name" mandatory="true" max_length="50" name="name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Start Date" mandatory="true" max_length="40" name="start_date" type="glide_date"/>
+        <element label="Amount" mandatory="true" max_length="15" name="amount" type="decimal"/>
+        <element label="Spent" max_length="15" name="spent" read_only="true" type="decimal"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="End Date" mandatory="true" max_length="40" name="end_date" type="glide_date"/>
+        <element label="Remaining" max_length="15" name="remaining" read_only="true" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="monthly" label="Period Type" mandatory="true" max_length="40" name="period_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Monthly" value="monthly"/>
+            </choice>
+        </element>
+    </element>
+</database>

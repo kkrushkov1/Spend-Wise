@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_item_stream_m2m_master_item">
+    <sys_sg_item_stream_m2m_master_item action="INSERT_OR_UPDATE">
+        <item_stream display_value="Expenses Item Stream">03f71ea9c35bee5061a8db0d050131fd</item_stream>
+        <master_item display_value="Expenses master_item">0ff71ea9c35bee5061a8db0d050131fd</master_item>
+        <sys_class_name>sys_sg_item_stream_m2m_master_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-11 13:08:58</sys_created_on>
+        <sys_id>83f71ea9c35bee5061a8db0d050131fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Spend Wise" source="x_1300913_spndwise">1b35d22dc31bee5061a8db0d0501314e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Spend Wise">1b35d22dc31bee5061a8db0d0501314e</sys_scope>
+        <sys_update_name>sys_sg_item_stream_m2m_master_item_83f71ea9c35bee5061a8db0d050131fe</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-11 13:08:58</sys_updated_on>
+    </sys_sg_item_stream_m2m_master_item>
+</record_update>
