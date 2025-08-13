@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_navigation_tab_map">
+    <sys_sg_navigation_tab_map action="INSERT_OR_UPDATE">
+        <navigation display_value="Mobile Agent">679d4f0653d033002d96ddeeff7b1279</navigation>
+        <navigation_tab display_value="Spend Wise">e2f7daa9c35bee5061a8db0d050131d6</navigation_tab>
+        <order>160</order>
+        <sys_class_name>sys_sg_navigation_tab_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-11 13:08:59</sys_created_on>
+        <sys_id>d3f75ea9c35bee5061a8db0d05013116</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Spend Wise" source="x_1300913_spndwise">1b35d22dc31bee5061a8db0d0501314e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Spend Wise">1b35d22dc31bee5061a8db0d0501314e</sys_scope>
+        <sys_update_name>sys_sg_navigation_tab_map_d3f75ea9c35bee5061a8db0d05013116</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-11 13:08:59</sys_updated_on>
+    </sys_sg_navigation_tab_map>
+</record_update>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_data_item">
+    <sys_sg_data_item action="INSERT_OR_UPDATE">
+        <condition_type>declarative</condition_type>
+        <description/>
+        <group_by/>
+        <instance_relative_url_qc/>
+        <name>Spend Wise Budget</name>
+        <offline_query_condition/>
+        <offline_query_condition_script/>
+        <query_condition/>
+        <query_condition_script/>
+        <sys_class_name>sys_sg_data_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-11 13:08:56</sys_created_on>
+        <sys_id>eef7daa9c35bee5061a8db0d050131d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Spend Wise Budget</sys_name>
+        <sys_package display_value="Spend Wise" source="x_1300913_spndwise">1b35d22dc31bee5061a8db0d0501314e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Spend Wise">1b35d22dc31bee5061a8db0d0501314e</sys_scope>
+        <sys_update_name>sys_sg_data_item_eef7daa9c35bee5061a8db0d050131d6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-11 13:08:56</sys_updated_on>
+        <table>x_1300913_spndwise_budget</table>
+    </sys_sg_data_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=eef7daa9c35bee5061a8db0d050131d6"/>
+</record_update>

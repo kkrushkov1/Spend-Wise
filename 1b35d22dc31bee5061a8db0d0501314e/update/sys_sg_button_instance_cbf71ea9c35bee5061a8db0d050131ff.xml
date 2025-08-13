@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_button_instance">
+    <sys_sg_button_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <button display_value="Delete Swipe (Expenses)">07f71ea9c35bee5061a8db0d050131ff</button>
+        <color_theme/>
+        <description/>
+        <disable_offline>false</disable_offline>
+        <field_name/>
+        <icon/>
+        <label>Delete</label>
+        <location>leading_swipe</location>
+        <name>Delete (Expenses)</name>
+        <order/>
+        <parent>0ff71ea9c35bee5061a8db0d050131fd</parent>
+        <parent_table>sys_sg_master_item</parent_table>
+        <sys_class_name>sys_sg_button_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-11 13:08:58</sys_created_on>
+        <sys_id>cbf71ea9c35bee5061a8db0d050131ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Delete (Expenses)</sys_name>
+        <sys_package display_value="Spend Wise" source="x_1300913_spndwise">1b35d22dc31bee5061a8db0d0501314e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Spend Wise">1b35d22dc31bee5061a8db0d0501314e</sys_scope>
+        <sys_update_name>sys_sg_button_instance_cbf71ea9c35bee5061a8db0d050131ff</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-11 13:08:58</sys_updated_on>
+        <table/>
+    </sys_sg_button_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=cbf71ea9c35bee5061a8db0d050131ff"/>
+</record_update>

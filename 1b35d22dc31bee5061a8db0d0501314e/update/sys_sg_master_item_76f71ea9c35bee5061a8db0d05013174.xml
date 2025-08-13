@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_master_item">
+    <sys_sg_master_item action="INSERT_OR_UPDATE">
+        <condition_order/>
+        <datasource_table>x_1300913_spndwise_category</datasource_table>
+        <datasource_table_condition/>
+        <embedded_screen display_value="Category Form Screen">76f71ea9c35bee5061a8db0d05013172</embedded_screen>
+        <item_view/>
+        <name>Category master_item</name>
+        <sys_class_name>sys_sg_master_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-11 13:08:57</sys_created_on>
+        <sys_id>76f71ea9c35bee5061a8db0d05013174</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Category master_item</sys_name>
+        <sys_package display_value="Spend Wise" source="x_1300913_spndwise">1b35d22dc31bee5061a8db0d0501314e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Spend Wise">1b35d22dc31bee5061a8db0d0501314e</sys_scope>
+        <sys_update_name>sys_sg_master_item_76f71ea9c35bee5061a8db0d05013174</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-11 13:08:57</sys_updated_on>
+        <use_view_config>true</use_view_config>
+        <view_config display_value="Category List Screen View Config">faf71ea9c35bee5061a8db0d0501315b</view_config>
+    </sys_sg_master_item>
+</record_update>

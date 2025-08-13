@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition_script/>
+        <description/>
+        <event_name>x_1300913_spndwise.ai.categorize</event_name>
+        <name>AI Categorize Expense</name>
+        <order>100</order>
+        <script><![CDATA[(function(expenseSysId) {
+    var gr = new GlideRecord('x_1300913_spndwise_expenses');
+    if (!gr.get(expenseSysId)) {
+        gs.error("Expense not found: " + expenseSysId);
+        return;
+    }
+
+    // Build category list 
+    function getActiveCategories() {
+        var list = [];
+        var catGR = new GlideRecord('x_1300913_spndwise_category');
+        catGR.query();
+        while (catGR.next()) list.push(catGR.name.toString());
+        return list;
+    }
+
+    var categories = getActiveCategories();
+
+    var prompt = "Classify this expense into one of these categories: " +
+        categories.join(", ") +
+        ". If none are appropriate, create a new **general** category name, not specific to brands or events. Examples: Food, Travel, Utilities, Entertainment, Shopping. If the category you are about to create or select is similar in meaning to an existing category, use the existing category instead. Treat synonyms or related categories as the same — for example 'Travel' and 'Transportation' should both map to 'Travel'" +
+        "Description: " + gr.description;
+
+
+    try {
+        var rm = new sn_ws.RESTMessageV2('x_1300913_spndwise.Hugging Face AI API ', 'Default POST');
+        rm.setStringParameterNoEscape('Token', gs.getProperty('x_1300913_spndwise.hugging_face_access_token'));
+        rm.setRequestBody(JSON.stringify({
+            messages: [{
+                    role: "system",
+                    content: "You are a helpful expense categorization assistant."
+                },
+                {
+                    role: "user",
+                    content: prompt
+                }
+            ],
+            "model": "openai/gpt-oss-20b:fireworks-ai"
+        }));
+
+        var res = rm.execute();
+        var status = res.getStatusCode();
+        if (status == 200) {
+            var body = JSON.parse(res.getBody());
+
+            var categoryName = body.choices[0].message.content.trim();
+
+            if (!categories.includes(categoryName)) {
+                var newCat = new GlideRecord('x_1300913_spndwise_category');
+                newCat.name = categoryName;
+                newCat.active = true;
+                var newCatSysId = newCat.insert();
+                gr.category = newCatSysId;
+                gr.update();
+            } else {
+                var existingCat = new GlideRecord('x_1300913_spndwise_category');
+                existingCat.get('name', categoryName);
+                gr.category = existingCat.sys_id;
+                gr.update();
+            }
+
+        } else {
+            gs.error("AI request failed: " + status + " " + res.getBody());
+        }
+    } catch (err) {
+        gs.error("AI integration error: " + err);
+    }
+
+})(event.parm1);]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-12 13:19:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b87f9b39c397a29061a8db0d050131d6</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>AI Categorize Expense</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Spend Wise" source="x_1300913_spndwise">1b35d22dc31bee5061a8db0d0501314e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Spend Wise">1b35d22dc31bee5061a8db0d0501314e</sys_scope>
+        <sys_update_name>sysevent_script_action_b87f9b39c397a29061a8db0d050131d6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-13 09:18:00</sys_updated_on>
+    </sysevent_script_action>
+</record_update>
