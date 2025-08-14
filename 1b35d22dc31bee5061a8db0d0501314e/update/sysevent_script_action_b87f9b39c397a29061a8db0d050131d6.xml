@@ -31,8 +31,14 @@
 
 
     try {
+        var credentialSysId = '397f0892c313669061a8db0d05013134'; // Hugging Face Access Token
+
+        var provider = new sn_cc.StandardCredentialsProvider();
+        var credential = provider.getCredentialByID(credentialSysId);
+        var token = credential.getAttribute("api_key");
+
         var rm = new sn_ws.RESTMessageV2('x_1300913_spndwise.Hugging Face AI API ', 'Default POST');
-        rm.setStringParameterNoEscape('Token', gs.getProperty('x_1300913_spndwise.hugging_face_access_token'));
+        rm.setStringParameterNoEscape('Token', token);
         rm.setRequestBody(JSON.stringify({
             messages: [{
                     role: "system",
@@ -82,7 +88,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b87f9b39c397a29061a8db0d050131d6</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>AI Categorize Expense</sys_name>
         <sys_overrides/>
         <sys_package display_value="Spend Wise" source="x_1300913_spndwise">1b35d22dc31bee5061a8db0d0501314e</sys_package>
@@ -90,6 +96,6 @@
         <sys_scope display_value="Spend Wise">1b35d22dc31bee5061a8db0d0501314e</sys_scope>
         <sys_update_name>sysevent_script_action_b87f9b39c397a29061a8db0d050131d6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-13 09:18:00</sys_updated_on>
+        <sys_updated_on>2025-08-13 11:30:21</sys_updated_on>
     </sysevent_script_action>
 </record_update>
